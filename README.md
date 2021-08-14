@@ -1,6 +1,6 @@
-# OVH alter DNS record
+# OVH refresh DNS zone
 
-This action updates an existing DNS record using the OVH API.
+This action refreshes a DNS zone using the OVH API.
 
 ## Inputs
 
@@ -24,32 +24,14 @@ API endpoint. Defaults to `ovh-eu`.
 
 **Required** DNS zone.
 
-## `record-id`
-
-**Required** DNS record id.
-
-## `subdomain`
-
-Subdomain.
-
-## `target`
-
-DNS record target.
-
-## `ttl`
-
-DNS record TTL.
-
 ## Example usage
 
 ```yaml
-uses: CrispyBaguette/ovh-dns-alter-action@v1.1
+uses: CrispyBaguette/ovh-dns-refresh-action@v1.1
 with:
   application-key: foo
   application-secret: bar
   consumer-key: far
   api-endpoint: ovh-us
   dns-zone: example.com
-  record-id: 42
-  target: "new_record_value"
 ```
