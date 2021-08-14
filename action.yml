@@ -1,0 +1,30 @@
+name: "OVH refresh DNS zone"
+description: "Refresh a DNS zone using the OVH API"
+inputs:
+  application-key:
+    description: "Application key"
+    required: true
+  application-secret:
+    description: "Application secret"
+    required: true
+  consumer-key:
+    description: "Consumer key"
+    required: true
+  api-endpoint:
+    description: "API endpoint"
+    required: false
+  dns-zone:
+    description: "DNS zone"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    APPLICATION_KEY: ${{ inputs.application-key }}
+    APPLICATION_SECRET: ${{ inputs.application-secret }}
+    CONSUMER_KEY: ${{ inputs.consumer-key }}
+    API_ENDPOINT: ${{ inputs.api-endpoint }}
+    DNS_ZONE: ${{ inputs.dns-zone }}
+branding:
+  icon: "server"
+  color: "purple"
