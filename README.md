@@ -27,7 +27,7 @@ API endpoint. Defaults to `ovh-eu`.
 ## Example usage
 
 ```yaml
-uses: CrispyBaguette/ovh-dns-refresh-action@v1.1
+uses: CrispyBaguette/ovh-dns-refresh-action@v1.0
 with:
   application-key: foo
   application-secret: bar
